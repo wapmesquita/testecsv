@@ -1,0 +1,353 @@
+<html>
+<head>
+  <title>[emp] - CMS</title>
+
+  <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <style>
+    /** patterns
+      red: #9C052D
+    */
+    * {
+      font-family: 'Open Sans', sans-serif !important;
+      font-size: 14px;
+      font-weight: normal;
+      color: #9C052D;
+    }
+    .navbar * {
+      color: #FFFFFF !important;
+      background-color: #9C052D;
+      font-weight: bolder;
+    }
+    .navbar {
+      -webkit-box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+      -moz-box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+      border-color: #9C052D !important;
+    }
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open a:hover,
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover {
+      background-color: rgb(191, 13, 57) !important;}
+
+    .main-content {
+      width: 90%;
+      margin: auto;
+      border-top: 20px;
+      display: block;
+    }
+
+    .header h1 {
+      color: #9C052D;
+      font-weight: bold;
+      font-size: 30px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid;
+      border-color: rgba(156,5,45,0.2);
+    }
+
+    .header {display: block; margin-bottom: 20px;}
+
+    .sites-list {display: inline-block; list-style: none; padding: 0px; width: 27%;float: left; overflow-x: auto; height: 80%;}
+    .sites-list li {display: block; margin-bottom: 10px; margin-right: 7px; border-bottom: 1px solid; border-color: rgba(156,5,45,0.2); padding: 4px; cursor: pointer;}
+    .sites-list li:hover {
+      -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    .sites-list .title {display: block; font-weight: bold; margin-bottom: 7px;}
+    .sites-list .last-change {display: block; opacity: 0.7; font-size: 10px !important;}
+
+    .site-content {display: inline-block; width: 71%;margin-left: 20px; overflow-x: auto;  height: 80%; padding-right: 7px;}
+
+    span.remove {margin-left: 7px;}
+    span.remove:hover {text-decoration: undeline; font-weight: bold; cursor: pointer;}
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">[emp]</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Tours</a></li>
+          <li class="active"><a href="#">Sites<span class="sr-only">(current)</span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">English</a></li>
+              <li><a href="#">French</a></li>
+              <li><a href="#">German</a></li>
+              <li><a href="#">Italian</a></li>
+              <li><a href="#">Mandarin</a></li>
+              <li><a href="#">Portuguese</a></li>
+              <li><a href="#">Spanish</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <span class="main-content">
+
+    <div class="sites-content-main">
+      <!--span class="header">
+        <h1>Sites</h1>
+      </span-->
+
+      <ul class="sites-list">
+        <li>
+          <span class="title">Bank of America Tower</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Hudson Yards</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Empire State Building</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Starrett-Lehigh Building</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Hoboken Terminal (Erie Lackawanna Sign)</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">IAC Building</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">The High Line</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Pier 54 (Titanic Pier)</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Greenwich Village</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Hudson River Park</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">One World Trade Center</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Colgate Clock</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Ellis Island</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Statue of Liberty/Liberty Island</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Governor’s Island</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">The Battery / Battery Park</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Brooklyn Bridge</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Manhattan Bridge</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Williamsburg Bridge</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Chrysler Building</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">United Nations Headquarters</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Roosevelt Island</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Ed Koch Queensboro Bridge (59th Street Bridge</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Gracie Mansion</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Robert F. Kennedy Bridge (Triborough Bridge)</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Uptown Bridges</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Yankee Stadium</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Harlem River Boat House</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">The Cloisters/Fort Tryon</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">George Washington Bridge</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Grant’s Tomb</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Upper West Side</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+        <li>
+          <span class="title">Intrepid Sea, Air & Space Museum</span>
+          <span class="last-change"> <span>Last change: </span> --- </span>
+        </li>
+
+      </ul>
+
+      <div class="site-content">
+
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" rows="5" id="description"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputFile">Audio File</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Choose the audio file for the selected language</p>
+          </div>
+
+          <div class="form-group">
+            <label>Advertising</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Show an advertise here
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="file" id="imageFile">
+            <p class="help-block">Select a PNG file</p>
+          </div>
+
+          <div class="form-group">
+            <label>Images</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remove all built-in images
+            </label>
+          </div>
+          <div class="form-group">
+            <p class="help-block">001_bank_of_america.png <span class="remove">X</span></p>
+            <p class="help-block">002_bank_of_america.png <span class="remove">X</span></p>
+            <p class="help-block">003_bank_of_america.png <span class="remove">X</span></p>
+            <p class="help-block">004_bank_of_america.png <span class="remove">X</span></p>
+            <p class="help-block">005_bank_of_america.png <span class="remove">X</span></p>
+            <input type="file" id="imageFile">
+            <p class="help-block">Select a PNG file</p>
+          </div>
+
+          <div class="form-group">
+            <label>Videos</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remove all built-in images
+            </label>
+          </div>
+          <div class="form-group">
+            <p class="help-block">001_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">002_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">003_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">004_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">005_bank_of_america.mp4 <span class="remove">X</span></p>
+            <input type="file" id="imageFile">
+            <p class="help-block">Select a PNG file</p>
+          </div>
+
+          <div class="form-group">
+            <label>Facts</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remove all built-in images
+            </label>
+          </div>
+          <div class="form-group">
+            <p class="help-block">001_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">002_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">003_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">004_bank_of_america.mp4 <span class="remove">X</span></p>
+            <p class="help-block">005_bank_of_america.mp4 <span class="remove">X</span></p>
+            <input type="file" id="imageFile">
+            <p class="help-block">Select a PNG file</p>
+          </div>
+
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+      </div>
+    </div>
+
+  </span>
+
+
+</body>
+
+<html>
