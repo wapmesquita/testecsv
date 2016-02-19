@@ -1,0 +1,735 @@
+<html>
+<head>
+</head>
+
+	<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+
+<body>
+
+	<div id="map"></div>
+	
+
+
+	<script>
+	
+		var points = [
+				  {
+				  "idsite": 1,
+				  "imagex": 375,
+				  "imagey": 1135,
+				  "latitude": 0,
+				  "longitude": 0
+				  },
+				  {
+				  "idsite": 2,
+				  "imagex": 507,
+				  "imagey": 1215,
+				  "latitude": 40.76054,
+				  "longitude": -74.00359
+				  },
+				  {
+				  "idsite": 3,
+				  "imagex": 366,
+				  "imagey": 1227,
+				  "latitude": 40.75759,
+				  "longitude": -74.00487
+				  },
+				  {
+				  "idsite": 4,
+				  "imagex": 345,
+				  "imagey": 1257,
+				  "latitude": 40.75188,
+				  "longitude": -74.00864
+				  },
+				  {
+				  "idsite": 5,
+				  "imagex": 364,
+				  "imagey": 1300,
+				  "latitude": 40.75188,
+				  "longitude": -74.00864
+				  },
+				  {
+				  "idsite": 6,
+				  "imagex": 333,
+				  "imagey": 1319,
+				  "latitude": 40.73538,
+				  "longitude": -74.01075
+				  },
+				  {
+				  "idsite": 7,
+				  "imagex": 180,
+				  "imagey": 1425,
+				  "latitude": 40.74685,
+				  "longitude": -74.01163
+				  },
+				  {
+				  "idsite": 8,
+				  "imagex": 374,
+				  "imagey": 1438,
+				  "latitude": 40.74285,
+				  "longitude": -74.0092
+				  },
+				  {
+				  "idsite": 9,
+				  "imagex": 306,
+				  "imagey": 1443,
+				  "latitude": 40.74091,
+				  "longitude": -74.00952
+				  },
+				  {
+				  "idsite": 10,
+				  "imagex": 300,
+				  "imagey": 1478,
+				  "latitude": 40.73726,
+				  "longitude": -74.01059
+				  },
+				  {
+				  "idsite": 11,
+				  "imagex": 295,
+				  "imagey": 1640,
+				  "latitude": 40.73726,
+				  "longitude": -74.01059
+				  },
+				  {
+				  "idsite": 12,
+				  "imagex": 131,
+				  "imagey": 1652,
+				  "latitude": 40.72662,
+				  "longitude": -74.01158
+				  },
+				  {
+				  "idsite": 13,
+				  "imagex": 265,
+				  "imagey": 1745,
+				  "latitude": 40.71847,
+				  "longitude": -74.01512
+				  },
+				  {
+				  "idsite": 14,
+				  "imagex": 76,
+				  "imagey": 1781,
+				  "latitude": 40.6958,
+				  "longitude": -73.9997
+				  },
+				  {
+				  "idsite": 15,
+				  "imagex": 49,
+				  "imagey": 1877,
+				  "latitude": 40.68216,
+				  "longitude": -74.01527
+				  },
+				  {
+				  "idsite": 16,
+				  "imagex": 243,
+				  "imagey": 1865,
+				  "latitude": 40.68412,
+				  "longitude": -74.01193
+				  },
+				  {
+				  "idsite": 17,
+				  "imagex": 418,
+				  "imagey": 1715,
+				  "latitude": 40.68659,
+				  "longitude": -74.00588
+				  },
+				  {
+				  "idsite": 18,
+				  "imagex": 467,
+				  "imagey": 1702,
+				  "latitude": 40.69873,
+				  "longitude": -73.99772
+				  },
+				  {
+				  "idsite": 19,
+				  "imagex": 608,
+				  "imagey": 1639,
+				  "latitude": 40.70413,
+				  "longitude": -73.99442
+				  },
+				  {
+				  "idsite": 20,
+				  "imagex": 507,
+				  "imagey": 1280,
+				  "latitude": 40.70558,
+				  "longitude": -73.97866
+				  },
+				  {
+				  "idsite": 21,
+				  "imagex": 587,
+				  "imagey": 1256,
+				  "latitude": 40.73629,
+				  "longitude": -73.96058
+				  },
+				  {
+				  "idsite": 22,
+				  "imagex": 642,
+				  "imagey": 1277,
+				  "latitude": 40.72908,
+				  "longitude": -73.96101
+				  },
+				  {
+				  "idsite": 23,
+				  "imagex": 741,
+				  "imagey": 1198,
+				  "latitude": 40.74956,
+				  "longitude": -73.95584
+				  },
+				  {
+				  "idsite": 24,
+				  "imagex": 778,
+				  "imagey": 1148,
+				  "latitude": 40.75159,
+				  "longitude": -73.95414
+				  },
+				  {
+				  "idsite": 25,
+				  "imagex": 834,
+				  "imagey": 1011,
+				  "latitude": 40.77452,
+				  "longitude": -73.9377
+				  },
+				  {
+				  "idsite": 26,
+				  "imagex": 957,
+				  "imagey": 970,
+				  "latitude": 40.77604,
+				  "longitude": -73.93692
+				  },
+				  {
+				  "idsite": 27,
+				  "imagex": 940,
+				  "imagey": 736,
+				  "latitude": 40.7846,
+				  "longitude": -73.93592
+				  },
+				  {
+				  "idsite": 28,
+				  "imagex": 933,
+				  "imagey": 466,
+				  "latitude": 40.82433,
+				  "longitude": -73.93182
+				  },
+				  {
+				  "idsite": 29,
+				  "imagex": 940,
+				  "imagey": 278,
+				  "latitude": 40.85561,
+				  "longitude": -73.92054
+				  },
+				  {
+				  "idsite": 30,
+				  "imagex": 839,
+				  "imagey": 225,
+				  "latitude": 40.87193,
+				  "longitude": -73.93144
+				  },
+				  {
+				  "idsite": 31,
+				  "imagex": 760,
+				  "imagey": 243,
+				  "latitude": 40.86382,
+				  "longitude": -73.93496
+				  },
+				  {
+				  "idsite": 32,
+				  "imagex": 683,
+				  "imagey": 613,
+				  "latitude": 40.82064,
+				  "longitude": -73.95971
+				  },
+				  {
+				  "idsite": 33,
+				  "imagex": 570,
+				  "imagey": 906,
+				  "latitude": 40.8057,
+				  "longitude": -73.97118
+				  },
+				  {
+				  "idsite": 34,
+				  "imagex": 396,
+				  "imagey": 1119,
+				  "latitude": 40.7676,
+				  "longitude": -73.99693
+				  }
+				  ];
+
+		var sites =  [
+  {
+  "description": "",
+  "idsite": 1,
+  "title": "Circle Line Sightseeing Cruises",
+  "audioURL": ""
+  },
+  {
+  "description": "It’s the third tallest building in New York City after the Empire State Building and 1 World Trade Center and the fifth tallest building in the U.S. The Bank of America Tower is one of the most efficient and ecologically friendly buildings in the world. A╥must- see╙for architectural buffs, its impressive 1,200 feet, 55 story-high tower is topped with a 255-foot-tall architectural spire.",
+  "idsite": 2,
+  "title": "Bank of America Tower",
+  "audioURL": "1_Bank_Of_America_Tower"
+  },
+  {
+  "description": "Hudson Yards is the largest private real estate development in the history of the United States. The site will include more than 17 million square feet of commercial and residential space, state-of-the-art office towers,more than 100 shops,a collection of restaurants,approximately 5,000 residences, 14 acres of public open space, a 750-seat public school and a 200-room Equinox- branded luxury hotel. Thedevelopmentof Hudson Yards will create more than 23,000 construction jobs",
+  "idsite": 3,
+  "images": [
+             "IPhone_0110_002_Hudson Yards_02.jpg",
+             "IPhone_0111_002_Hudson Yards_01.jpg"
+             ],
+  "title": "Hudson Yards",
+  "audioURL": "2_Hudson_Yards"
+  },
+  {
+  "description": "Soaring 1,250 feet above the city, the Empire State Building is sure to mesmerize. From its distinctive Art Deco style to its extraordinary vistas, this iconic structure is considered one of the Seven Wonders of the Modern World. Be sure to visit the 86th and 102nd Floor Observatories for breathtaking views of the city’s landmarks, and on a clear day, you can see New Jersey, Connecticut, Massachusetts and Pennsylvania.",
+  "idsite": 4,
+  "images": [
+             "IPhone_0105_003_Empire State Building_05.jpg",
+             "IPhone_0106_003_Empire State Building_04.jpg",
+             "IPhone_0107_003_Empire State Building_03.jpg",
+             "IPhone_0108_003_Empire State Building_02.jpg",
+             "IPhone_0109_003_Empire State Building_01.jpg"
+             ],
+  "title": "Empire State Building",
+  "audioURL": "3_Empire_State_Building"
+  },
+  {
+  "description": "Some call the Starrett-Lehigh Building a Modernist experiment in industrial architecture. Others say it resembles╥a multi-layered wedding cake. Regard less, it's a bold example of the New International or Bauhaus Style. Designed as an innovative freight distribution center, with tracks leading from the piers into the building, the building boasts eight miles of horizontal ribbon windows alternating with plain brick bands.",
+  "idsite": 5,
+  "images": [
+             "IPhone_0103_004_Starrett-Lehigh Building_02.jpg",
+             "IPhone_0104_004_Starrett-Lehigh Building_01.jpg"
+             ],
+  "title": "Starrett-Lehigh Building",
+  "audioURL": "4_Starrett-Lehigh_Building"
+  },
+  {
+  "description": "Over 50,000 people use the Hoboken Terminal daily, making it one of New York’s major transportation hubs. The design makes it one of New York’s most fascinating. Located on the Hudson River in Hobo- ken, New Jersey, the terminal’s main waiting room is home to Greek Revival motifs and tiled stained glass by Louis Comfort Tiffany. Itsno wonder the Hoboken Terminal is considered one of the country’s finest.",
+  "idsite": 6,
+  "images": [
+             "IPhone_0099_005_Hoboken Terminal_04.jpg",
+             "IPhone_0100_005_Hoboken Terminal_03.jpg",
+             "IPhone_0101_005_Hoboken Terminal_02.jpg",
+             "IPhone_0102_005_Hoboken Terminal_01.jpg"
+             ],
+  "title": "Hoboken Terminal (Erie Lackawanna Sign)",
+  "audioURL": "5_Hoboken_Terminal"
+  },
+  {
+  "description": "As with all Frank Gehry designs, this architectural marvel will raise some eyebrows and elicit some smiles. The IAC Building, headquarters of Internet conglomerate InterActiveCorp, consists of two levels of twisted towers packed together like the cells of a dynamic, swirling beehive. Once described by Vanity Fair as╥perhaps the world’s most attractive office building,╙it is definitely the most interesting.",
+  "idsite": 7,
+  "images": [
+             "IPhone_0096_006_IAC Building_03.jpg",
+             "IPhone_0097_006_IAC Building_02.jpg",
+             "IPhone_0098_006_IAC Building_01.jpg"
+             ],
+  "title": "IAC Building",
+  "audioURL": "6_IAC_Building"
+  },
+  {
+  "description": "If the great outdoors is on your itinerary, make your way to The High Line. The mile-long linear park is built on an elevated section of the former New York Central Railroad spur called the West Side Line. Here, you’ll spy naturalized plantings╤up to 210 species╤inspired by the self-seeded landscape that grew on the previously abandoned tracks. Rolling lounges also invite you to sit back, relax and witness spectacular river views.",
+  "idsite": 8,
+  "images": [
+             "IPhone_0093_007_The High Line_03.jpg",
+             "IPhone_0094_007_The High Line_02.jpg",
+             "IPhone_0095_007_The High Line_01.jpg"
+             ],
+  "title": "The High Line",
+  "audioURL": "7_The_High_Line"
+  },
+  {
+  "description": "Now one of Hudson River Park’s performance spaces, Pier 54 has its place in history as the intended destination for the Titanic. After the sinking of the Titanic, the RMS Carpathia discharged the Titanic’s survivors at Pier 54. Three years later, the RMS Lusitania left Pier 54 and was torpedoed by a German U-boat, becoming the rallying cry for America’s involvement in WWI.",
+  "idsite": 9,
+  "images": [
+             "IPhone_0090_008_Pier 54_03.jpg",
+             "IPhone_0091_008_Pier 54_02.jpg",
+             "IPhone_0092_008_Pier 54_01.jpg"
+             ],
+  "title": "Pier 54 (Titanic Pier)",
+  "audioURL": "8_Pier_54"
+  },
+  {
+  "description": "Native New Yorkers call it\"The Village\" while tourists call it a hip place to visit. This residential neighborhood on the west side of lower Manhattan, established itself as an artist’s haven in the late 19th century and as the East Coast birthplace of the Beat movement in the mid 20th century. Today, itshome to mid-rise apartments, 19th-century row houses and the Cherry Lane Theatre, the City’s oldest running Off-Broadway theater.",
+  "idsite": 10,
+  "images": [
+             "IPhone_0086_009_Greenwich Village_04.jpg",
+             "IPhone_0087_009_Greenwich Village_03.jpg",
+             "IPhone_0088_009_Greenwich Village_02.jpg",
+             "IPhone_0089_009_Greenwich Village_01.jpg"
+             ],
+  "title": "Greenwich Village",
+  "audioURL": "9_Greenwich_Village"
+  },
+  {
+  "description": "Run, bike, walk, kick and volley╤Hudson River Park opens up the waterfront for all types of sports and recreation. Have fun at the tennis and soccer fields, batting cages, children’s playground, dog run and recreational piers. The park also connects you to popular landmarks and recreational venues such as the World Trade Center site, Chelsea Piers, World Yacht, the Circle Line and the Intrepid Sea-Air-Space Museum.",
+  "idsite": 11,
+  "images": [
+             "IPhone_0083_010_Hudson River Park_04.jpg",
+             "IPhone_0084_010_Hudson River Park_03.jpg",
+             "IPhone_0085_010_Hudson River Park_02.jpg"
+             ],
+  "title": "Hudson River Park",
+  "audioURL": "10_Hudson_River_Park"
+  },
+  {
+  "description": "Upon its completion in 2013, One World Trade Center became the tallest building in the Western Hemisphere at 104 stories tall. In addition to the One World Observatory on the upper floors, the World Trade Center complex includes five new skyscrapers, the National September 11 Memorial & Museum, the World Trade Center Transportation Hub, a performing arts center and 550,000 square feet of retail space. The entire complex is built on the same site as the previous World Trade Center complex which was destroyed in the terrorist attacks of September 11, 2001.",
+  "idsite": 12,
+  "images": [
+             "IPhone_0079_011_One World Trade Center_04.jpg",
+             "IPhone_0080_011_One World Trade Center_03.jpg",
+             "IPhone_0081_011_One World Trade Center_02.jpg",
+             "IPhone_0082_011_One World Trade Center_01.jpg"
+             ],
+  "title": "One World Trade Center",
+  "audioURL": "11_One_World_Trade_Center"
+  },
+  {
+  "description": "For years, the Colgate-Palmolive factory was a fixture on the New Jersey skyline, with its octagonal clock visible for miles. Today, visitors from all corners of the globe continue to marvel at this historic clock that sits near Exchange Place in Jersey City, just 109 yards south of the Goldman Sachs Tower. An impressive 50 feet in diameter, the clock was built in 1924 to replace an earlier version designed for Colgate’s centennial in 1906.",
+  "idsite": 13,
+  "images": [
+             "IPhone_0075_012_Colgate Clock_04.jpg",
+             "IPhone_0076_012_Colgate Clock_03.jpg",
+             "IPhone_0077_012_Colgate Clock_02.jpg",
+             "IPhone_0078_012_Colgate Clock_01.jpg"
+             ],
+  "title": "Colgate Clock",
+  "audioURL": "12_Colgate_Clock"
+  },
+  {
+  "description": "Itsestimated that nearly half of all Americans today can trace their family history to at least one person who passed through the Port of New York at Ellis Island, the nation’s busiest immigrant inspection station from 1892 until 1954. Take a step back in time at the Ellis Island Immigration Museum, and investigate your own immigration history and family documentation.",
+  "idsite": 14,
+  "images": [
+             "IPhone_0072_013_Ellis Island_03.jpg",
+             "IPhone_0073_013_Ellis Island_02.jpg",
+             "IPhone_0074_013_Ellis Island_01.jpg"
+             ],
+  "title": "Ellis Island",
+  "audioURL": "13_Ellis_Island"
+  },
+  {
+  "description": "Lady Liberty stands an impressive 305 feet high, from the ground to the tip of her flame, and is made of 3/32╙thick copper╤the thickness of two pennies pressed together. The naturally oxidized copper gives her the famous╥green╙patina look. While she under- goes renovations, visitors have access to the grounds of Liberty Island. Circle Line Sightseeing Cruises always offers the best photo opportunities from the harbor.",
+  "idsite": 15,
+  "images": [
+             "IPhone_0067_014_Statue of Liberty_05.jpg",
+             "IPhone_0068_014_Statue of Liberty_04.jpg",
+             "IPhone_0069_014_Statue of Liberty_03.jpg",
+             "IPhone_0070_014_Statue of Liberty_02.jpg",
+             "IPhone_0071_014_Statue of Liberty_01.jpg"
+             ],
+  "title": "Statue of Liberty/Liberty Island",
+  "audioURL": "14_Statue_Of_Liberty"
+  },
+  {
+  "description": "Located only 800 yards from the southern tip of Manhattan, Governor’s Island is a 172-acre island that was once a military base, home to the U.S. Army and later the Coast Guard. Hop on a ferry from Brooklyn or Manhattan in the summer and early fall to snap a photo or two of the island’s historical fortifications╨Fort Jay and Castle Williams.",
+  "idsite": 16,
+  "images": [
+             "IPhone_0064_015_Governors Island_03.jpg",
+             "IPhone_0065_015_Governors Island_02.jpg",
+             "IPhone_0066_015_Governors Island_01.jpg"
+             ],
+  "title": "Governor’s Island",
+  "audioURL": "15_Governor's_Island"
+  },
+  {
+  "description": "Catch a concert, catch a ferry, or catch a glimpse of the city’s past╤Battery Park has it all. This lush, 25-acre public park on the southern tip of Manhattan has evolved into the largest open space downtown with concerts all summer long. Others flock to see╥The Battery,╙named for artillery batteries that were positioned there to protect early settlers.",
+  "idsite": 17,
+  "images": [
+             "IPhone_0061_016_Battery Park_03.jpg",
+             "IPhone_0062_016_Battery Park_02.jpg",
+             "IPhone_0063_016_Battery Park_01.jpg"
+             ],
+  "title": "The Battery / Battery Park",
+  "audioURL": "16_Battery"
+  },
+  {
+  "description": "As one of the oldest suspension bridges in the U.S., the Brooklyn Bridge spans the East River and connects Manhattan with Brooklyn. Its neo-Gothic architecture boasts pointed arches and 276-foot-high towers built of limestone and granite. Since 1883, the Brooklyn Bridge was╥bought and sold╙countless times by con men and swindlers. Itswhere the old adage,╥If you believe that, I’ve got a bridge to sell you╙came from.",
+  "idsite": 18,
+  "images": [
+             "IPhone_0058_017_Brooklyn Bridge_03.jpg",
+             "IPhone_0059_017_Brooklyn Bridge_02.jpg",
+             "IPhone_0060_017_Brooklyn Bridge_01.jpg"
+             ],
+  "title": "Brooklyn Bridge",
+  "audioURL": "17_Brooklyn_Bridge"
+  },
+  {
+  "description": "The Manhattan Bridge spans 6,855 feet across the East River, with vehicle lanes, subway tracks, a bike path and pedestrian walkways. The bridge connects lower Manhattan with Brooklyn in style. Six years after it opened, an elaborate arch and colonnade were added on the Manhattan side, featuring pylons sculpted by Carl A. Heber and a frieze by Charles Rumsey called Buffalo Hunt.",
+  "idsite": 19,
+  "images": [
+             "IPhone_0054_018_Manhattan Bridge_04.jpg",
+             "IPhone_0055_018_Manhattan Bridge_03.jpg",
+             "IPhone_0056_018_Manhattan Bridge_02.jpg",
+             "IPhone_0057_018_Manhattan Bridge_01.jpg"
+             ],
+  "title": "Manhattan Bridge",
+  "audioURL": "18_Manhattan_Bridge"
+  },
+  {
+  "description": "The Williamsburg Bridge crosses the East River, connecting the lower east side of Manhattan to Brooklyn. The entire bridge is 7,308 feet long with 338-foot-high towers. Itsworth a trip across to catch sight of its unconventional design. Its main span hangs from cables in the typical manner, but the side spans are supported by trusses, rather than cables above.",
+  "idsite": 20,
+  "images": [
+             "IPhone_0051_019_Williamsburg Bridge_04.jpg",
+             "IPhone_0052_019_Williamsburg Bridge_02.jpg",
+             "IPhone_0053_019_Williamsburg Bridge_01.jpg"
+             ],
+  "title": "Williamsburg Bridge",
+  "audioURL": "19_WIilliamsburg_Bridge"
+  },
+  {
+  "description": "You’ll quickly see why the Chrysler Building ranked ninth on the╥List of America's Favorite Architecture╙by the American Institute of Architects. This distinctive building reaches an impressive 1,050 feet high and is a classic example of Art Deco architecture. Outside, it dons gargoyles that depict Chrysler car ornaments and a spire modeled on a radiator grille. Inside is equally stunning, with marble floors and Art Deco patterns.",
+  "idsite": 21,
+  "images": [
+             "IPhone_0048_020_Chrysler Building_03.jpg",
+             "IPhone_0049_020_Chrysler Building_02.jpg",
+             "IPhone_0050_020_Chrysler Building_01.jpg"
+             ],
+  "title": "Chrysler Building",
+  "audioURL": "20_Chrysler_Building"
+  },
+  {
+  "description": "New York City has been home to the official head- quarters of the UN since its construction in 1952. Designed by an international team of 11 architects at the end of World War II, the UN belongs to the Organization’s 193 Member States. In addition to several buildings, the complex features flags of all 193 UN member states, plus the UN flag, flown in English alphabetical order. Visitors from all nations are welcome.",
+  "idsite": 22,
+  "images": [
+             "IPhone_0045_021_United Nations Headquarters_03.jpg",
+             "IPhone_0046_021_United Nations Headquarters_02.jpg",
+             "IPhone_0047_021_United Nations Headquarters_01.jpg"
+             ],
+  "title": "United Nations Headquarters",
+  "audioURL": "21_United_Nations"
+  },
+  {
+  "description": "A mere two miles long, Roosevelt Island has what it takes to inspire you. This narrow island on the East River lies between Manhattan and Queens, though technically part of Manhattan. Roosevelt Island is home to the Louis Kahn designed Four Freedoms Park to honor American President Franklin Roosevelt. In addition, this small island is the future home of the Cornell Tech, Cornell University’s 21st century technical campus.",
+  "idsite": 23,
+  "images": [
+             "IPhone_0042_022_Roosevelt Island_03.jpg",
+             "IPhone_0043_022_Roosevelt Island_02.jpg",
+             "IPhone_0044_022_Roosevelt Island_01.jpg"
+             ],
+  "title": "Roosevelt Island",
+  "audioURL": "22_Roosevelt_Island"
+  },
+  {
+  "description": "The Queensboro Bridge, also known as the 59th Street Bridge, was recently renamed in honor of former New York City mayor, Ed Koch. Take a drive across and you’ll see why one architect showered it with praise,╥╔there is a charm, a certain graceful- ness in the repetition of symmetrical parts. Wrought entirely of structural steel, at many points, small adornments add appreciably to the delicacy of the structure.╙",
+  "idsite": 24,
+  "images": [
+             "IPhone_0039_023_Ed Koch Queensboro Bridge_03.jpg",
+             "IPhone_0040_023_Ed Koch Queensboro Bridge_02.jpg",
+             "IPhone_0041_023_Ed Koch Queensboro Bridge_01.jpg"
+             ],
+  "title": "Ed Koch Queensboro Bridge (59th Street Bridge",
+  "audioURL": "23_Queensboro_Bridge"
+  },
+  {
+  "description": "It was once a country estate, ice cream parlor, the first home of the Museum of the City of New York, and most famously, a residence for most of New York’s mayors since Fiorello LaGuardia. Gracie Mansion is located in Manhattan’s Carl Schurz Park on the East River.",
+  "idsite": 25,
+  "images": [
+             "IPhone_0036_024_Gracie Mansion_03.jpg",
+             "IPhone_0037_024_Gracie Mansion_02.jpg",
+             "IPhone_0038_024_Gracie Mansion_01.jpg"
+             ],
+  "title": "Gracie Mansion",
+  "audioURL": "24_Gracie_Mansion"
+  },
+  {
+  "description": "The Triborough Bridge, sometimes spelled Triboro, was recently renamed the Robert F. Kennedy Bridge. Itsyour connection to Manhattan, the Bronx and Queens╤the Manhattan branch links the Harlem River Drive, the FDR Drive, and 125th Street; the Bronx Crossing leads to South Bronx, and the longest span connects to Queens. The three branches meet on Randall’s Island, a New York City park.",
+  "idsite": 26,
+  "images": [
+             "IPhone_0033_025_Robert F. Kennedy Bridge (Triboro)_03.jpg",
+             "IPhone_0034_025_Robert F. Kennedy Bridge (Triboro)_02.jpg",
+             "IPhone_0035_025_Robert F. Kennedy Bridge (Triboro)_01.jpg"
+             ],
+  "title": "Robert F. Kennedy Bridge (Triborough Bridge)",
+  "audioURL": "25_Triborough_Bridge"
+  },
+  {
+  "description": "With over a dozen bridges uptown, you can hardly travel a few miles without passing or traveling over a bridge. The Third Avenue Bridge, for instance, spans the Harlem River, connecting Third Avenue in Manhattan with Third Avenue in the Bronx. You can also walk or bike across Wards Island Bridge en route to the playing fields and scenic waterfront of Randall’s Island and Wards Island.",
+  "idsite": 27,
+  "images": [
+             "IPhone_0025_026_Wards Island Bridge_08.jpg",
+             "IPhone_0026_026_Wards Island Bridge_07.jpg",
+             "IPhone_0027_026_Third Avenue Bridge_06.jpg",
+             "IPhone_0028_026_The High Bridge_05.jpg",
+             "IPhone_0029_026_Spuyten Duyvil Bridge_04.jpg",
+             "IPhone_0030_026_Spuyten Duyvil Bridge_03.jpg",
+             "IPhone_0031_026_Henry Hudson Bridge_02.jpg",
+             "IPhone_0032_026_Harlem River Lift Bridge_01.jpg"
+             ],
+  "title": "Uptown Bridges",
+  "audioURL": "26_Uptown_Bridges"
+  },
+  {
+  "description": "Hop on the subway to the Bronx, sit back and relax, and watch as the╥Bronx Bombers╙crush the competition in their newest ballpark. Built across the street from the original stadium in the Bronx, the new ball- park features a replica of the copper frieze that lined the upper deck roof. Inside, one of the most popular features is Monument Park, showcasing retired numbers and other Yankee memorabilia.",
+  "idsite": 28,
+  "images": [
+             "IPhone_0025_026_Wards Island Bridge_08.jpg",
+             "IPhone_0026_026_Wards Island Bridge_07.jpg",
+             "IPhone_0027_026_Third Avenue Bridge_06.jpg",
+             "IPhone_0028_026_The High Bridge_05.jpg",
+             "IPhone_0029_026_Spuyten Duyvil Bridge_04.jpg",
+             "IPhone_0030_026_Spuyten Duyvil Bridge_03.jpg",
+             "IPhone_0031_026_Henry Hudson Bridge_02.jpg",
+             "IPhone_0032_026_Harlem River Lift Bridge_01.jpg"
+             ],
+  "title": "Yankee Stadium",
+  "audioURL": "27_Yankee_Stadium"
+  },
+  {
+  "description": "What do Columbia University and the Harlem River have in common? Rowing! The Harlem River is the home course for the Columbia University heavyweight rowing crew. In fact, the team’s boathouse sits on the Harlem River bank. The facility, the newest in the Ivy League, features a three-bay shell house, complete with an upper level that includes a weight room and a meeting area overlooking the water.",
+  "idsite": 29,
+  "images": [
+             "IPhone_0019_028_Harlem River Boat House_03.jpg",
+             "IPhone_0020_028_Harlem River Boat House_02.jpg",
+             "IPhone_0021_028_Harlem River Boat House_01.jpg",
+             "IPhone_0022_027_Yankee Stadium_03.jpg",
+             "IPhone_0023_027_Yankee Stadium_02.jpg",
+             "IPhone_0024_027_Yankee Stadium_01.jpg"
+             ],
+  "title": "Harlem River Boat House",
+  "audioURL": "28_Harlem_River_Boat_House"
+  },
+  {
+  "description": "A bit of medieval Europe sits atop a hill overlooking the Hudson River. The Cloisters is listed on the National Register of Historic Places╤for good reason. The structure incorporates elements of five French cloistered abbeys dating back to the 12th century. Known for its Romanesque and Gothic architectural sculpture, it features stained glass, tapestries, paintings and exquisite medieval-style gardens.",
+  "idsite": 30,
+  "images": [
+             "IPhone_0015_029_The Cloisters and Fort Tryon_04.jpg",
+             "IPhone_0016_029_The Cloisters and Fort Tryon_03.jpg",
+             "IPhone_0017_029_The Cloisters and Fort Tryon_02.jpg",
+             "IPhone_0018_029_The Cloisters and Fort Tryon_01.jpg"
+             ],
+  "title": "The Cloisters/Fort Tryon",
+  "audioURL": "29_The_Cloisters_Fort_Tryon"
+  },
+  {
+  "description": "Cross the╥GW╙by car, bike or foot, and the shimmering Hudson River and lush mountains that envelope it will simply take your breath away. The╥GW╙spans 4,757 feet (1,450 m), connecting New Jersey with Manhattan and carrying nearly 106 million vehicles per year. Initially named the Hudson River Bridge, today, the George Washington Bridge is the world’s busiest motor vehicle bridge.",
+  "idsite": 31,
+  "images": [
+             "IPhone_0012_030_George Washington Bridge_03.jpg",
+             "IPhone_0013_030_George Washington Bridge_02.jpg",
+             "IPhone_0014_030_George Washington Bridge_01.jpg"
+             ],
+  "title": "George Washington Bridge",
+  "audioURL": "30_George_Washington_Bridge"
+  },
+  {
+  "description": "To many a visitor’s surprise, Grant’s Tomb sits prominently in the Morningside Heights area of Manhattan overlooking the Hudson River. Officially designated as the General Grant National Memorial, it’s the final resting place of President Ulysses S. Grant and his wife, Julia Dent Grant. The memorial is the second largest mausoleum in the Western Hemisphere and houses twin sarcophagi of Grant and his wife.",
+  "idsite": 32,
+  "images": [
+             "IPhone_0007_031_Grant's Tomb_05.jpg",
+             "IPhone_0008_031_Grant's Tomb_04.jpg",
+             "IPhone_0009_031_Grant's Tomb_03.jpg",
+             "IPhone_0010_031_Grant's Tomb_02.jpg",
+             "IPhone_0011_031_Grant's Tomb_01.jpg"
+             ],
+  "title": "Grant’s Tomb",
+  "audioURL": "31_Grant's_Tomb"
+  },
+  {
+  "description": "This upscale neighborhood in upper Manhattan is a╥must-see╙for Beatles fans and celebrity hounds alike. The landmark Dakota, where John Lennon once lived, makes its home on the Upper West Side. It’s also a convenient location for exploring Central Park, the American Museum of Natural History, the Neo-Gothic Cathedral of St. John the Divine and The Lincoln Center.",
+  "idsite": 33,
+  "images": [
+             "IPhone_0004_032_Upper West Side_03.jpg",
+             "IPhone_0005_032_Upper West Side_02.jpg",
+             "IPhone_0006_032_Upper West Side_01.jpg"
+             ],
+  "title": "Upper West Side",
+  "audioURL": "32_Upper_West_Side"
+  },
+  {
+  "description": "The USS Intrepid was a primary recovery vessel for NASA, served three tours of duty off Vietnam, and relayed submarine surveillance in the North Atlantic during the Cold War. Tour this National Historic Land- mark and ride in the A-6 Cockpit Simulator. Experience historical re-creations such as the╥Kamikaze: Day of Darkness, Day of Light,or go deep inside the Growler Submarine. The Space Shuttle Enterprise, the museums latest addition, showcases the technological triumphs and scientific breakthroughs that result from manned space flight.",
+  "idsite": 34,
+  "images": [
+             "IPhone_0000_033_Intrepid_04.jpg",
+             "IPhone_0001_033_Intrepid_03.jpg",
+             "IPhone_0002_033_Intrepid_02.jpg",
+             "IPhone_0003_033_Intrepid_01.jpg"
+             ],
+  "title": "Intrepid Sea, Air & Space Museum",
+  "audioURL": "33_Intrepid_Museum"
+  }
+  ];
+  
+
+				
+		function initMap() {
+		  var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 11,
+			center: {lat: 40.7574799, lng: -74.0124521},
+			mapTypeId: google.maps.MapTypeId.TERRAIN
+		  });
+		  
+		var mapPoints = {};
+		
+		points.forEach(function(point) {
+			mapPoints[point.idsite] = point;
+		});
+  
+		sites.forEach(function(site) {
+			site.position = new google.maps.LatLng(mapPoints[site.idsite].latitude, mapPoints[site.idsite].longitude);
+			
+			new google.maps.Marker({
+					position: site.position,
+					title:site.title,
+					map: map
+				});
+			  
+			  new google.maps.Circle({
+					center: site.position,
+					radius: 400,
+					strokeColor: "#FF0000",
+					strokeOpacity: 0.8,
+					strokeWeight: 2,
+					fillColor: "#FF0000",
+					fillOpacity: 0.35,
+					map: map
+				});
+		});
+
+		/*
+		var myLatlng = [
+			new google.maps.LatLng(40.7574799,-74.0124521),
+			new google.maps.LatLng(40.7420434,-74.0174644),
+			new google.maps.LatLng(40.7258219,-74.0223348),
+			new google.maps.LatLng(40.7047683,-74.0292374),
+			new google.maps.LatLng(40.6873527,-74.0428513),
+			new google.maps.LatLng(40.6950959,-74.0173456),
+			new google.maps.LatLng(40.7036438,-74.0001787),
+			new google.maps.LatLng(40.7078754,-73.9853924),
+			new google.maps.LatLng(40.7163604,-73.9712067),
+			new google.maps.LatLng(-22.8153201,-47.0470046),
+			new google.maps.LatLng(-22.8165947,-47.0444643),
+			new google.maps.LatLng(-22.8169363,-47.0465427),
+			new google.maps.LatLng(-22.8135328,-47.047404),
+		  ];
+		  
+		  myLatlng.forEach(function(obj) {
+			  new google.maps.Marker({
+					position: obj,
+					title:"Center",
+					map: map
+				});
+			  
+			  new google.maps.Circle({
+					center: obj,
+					radius: 800,
+					strokeColor: "#FF0000",
+					strokeOpacity: 0.8,
+					strokeWeight: 2,
+					fillColor: "#FF0000",
+					fillOpacity: 0.35,
+					map: map
+				});
+		  });
+		  */
+		}
+	</script>
+	
+		    <script 
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+</body>
+</html>
